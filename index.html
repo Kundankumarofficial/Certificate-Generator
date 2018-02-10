@@ -19,6 +19,7 @@ body {
   font-size: 18px;
 background: linear-gradient(to bottom right, #ee0979, #ff6a00);
 background-size: cover;
+background-repeat: no-repeat;
 }
 
 .container {
@@ -33,6 +34,7 @@ form {
   width: 100%;
   margin: 50px auto;
   padding: 50px;
+  margin-bottom: 80px;
   background: white;
   text-align: center;
 }
@@ -114,7 +116,12 @@ h3 {
   font-size: 24px;
   font-weight: 700;
 }
+
+.butt{
+     top: 400px;
+     }	
 	</style>
+
 </head>
 <body>
 <div class="container">
@@ -126,7 +133,7 @@ h3 {
     <input type="number" placeholder="No. of Issues solved" name="issue">
     <input type="number" placeholder="Total Score" name="score">
     <input type="text" placeholder="Favourite Project" name="project">
-    <button type="submit" value="submit">GENERATE</button>
+    <div class="butt"><button type="submit" value="submit">GENERATE</button></div>
   </form>
 </div>
 </body>
