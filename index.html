@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="des.css">
+	<style type="text/css">
+	* { box-sizing: border-box; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Economica', 'Arial', sans-serif;
+  font-size: 18px;
+background: linear-gradient(to bottom right, #ee0979, #ff6a00);
+background-size: cover;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+form {
+  position: relative;
+  width: 100%;
+  margin: 50px auto;
+  padding: 50px;
+  background: white;
+  text-align: center;
+}
+
+input {
+  display: inline-block;
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  border: 2px dashed lightblue;
+  outline: none;
+  font-size: 20px;
+  font-family: 'Economica', 'Arial', sans-serif;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+input:focus { border-color: deepskyblue; }
+
+button {
+  position: absolute;
+  left: calc(50% - 150px / 2);
+  bottom: calc(- 50px / 2);
+  width: 150px;
+  height: 50px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-family: 'Economica', 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  background: mediumblue;
+  transition: all 0.2s ease;
+}
+
+button:hover { background: midnightblue; }
+
+button.valid,
+button.valid:hover { background: mediumseagreen; }
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+svg path {
+  stroke-width: 10px;
+  stroke: mediumseagreen;
+  fill: none;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+svg path.hidden { opacity: 0; }
+
+svg path.animate { animation: drawBorder 1s linear; }
+
+@keyframes drawBorder {
+  from {
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 4000;
+  }
+  
+  to {
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 0;
+  }
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+}
+	</style>
+</head>
+<body>
+<div class="container">
+  <form action="cert.php" method="get">
+    <h3>OpenCode'18 Certificate Generator</h3>
+   
+    <input type="text" placeholder="Name" name="name" >
+    <input type="text" placeholder="Github Username" name="git">
+    <input type="text" placeholder="No. of Issues solved" name="issue">
+    <input type="text" placeholder="Total Score" name="score">
+    <input type="text" placeholder="Favourite Project" name="project">
+    <button type="submit" value="submit">Send!</button>
+  </form>
+</div>
+</body>
+
+</html>
